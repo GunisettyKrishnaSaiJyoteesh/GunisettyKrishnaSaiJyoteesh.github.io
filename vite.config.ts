@@ -5,18 +5,26 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/", // 👈 IMPORTANT: Ensures correct asset paths in GitHub Pages
+
   server: {
     host: "::",
     port: 8080,
   },
+
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+
+  // 👇 This fallback is only used in dev, NOT needed for prod
+  build: {
+    outDir: "dist", // default, but keep it clear
+  }
 }));

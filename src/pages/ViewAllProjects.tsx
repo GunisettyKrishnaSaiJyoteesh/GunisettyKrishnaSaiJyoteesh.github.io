@@ -34,6 +34,24 @@ const allProjects = [
     liveLink:
       "https://app.powerbi.com/links/WSYfbilfBH?ctid=6e0ab46c-ac12-4727-99f7-3271c72e220f&pbi_source=linkShare",
   },
+  {
+    title : "Market Segmentation Analysis on Electric Vehicles in India",
+    description:
+      "Performed business analysis on real-time EV data for a EV production company to enter into the market. The analysis includes market segmentation, customer profiling, and demand forecasting.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1726812103168-6ad609e53f94?q=80&w=1208&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Python","Rest API", "Data Analysis"],
+    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/MarketSegmentationOnElectricVehicle",
+  },
+  {
+    title : "AI Water Tracker",
+    description:
+      "AI Water Tracker is an intelligent hydration monitoring system built with FastAPI, LangChain (Ollama or OpenAI LLMs), SQLite, and Streamlit. The app allows users to log their daily water intake, analyze hydration levels using AI, and visualize intake history. It features a REST API backend, a smart AI agent for personalized hydration suggestions, and an intuitive frontend dashboard for tracking progress. Designed to promote healthy living through technology.",
+    image :"https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags : ["Python", "FastAPI","LangChain (Ollama)", "Streamlit", "SQLite", "Pydantic"],
+    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/AI-Water-Tracker.github.io",
+    liveLink: "https://ai-water-tracker.streamlit.app/"
+  },
 ];
 
 const ViewAllProjects = () => {

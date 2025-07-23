@@ -7,21 +7,22 @@ import { Link } from "react-router-dom"; // at the top
 const Projects = () => {
   const projects = [
     {
-      title: "ANITS FOOD ENGINE",
+      title : "Market Segmentation Analysis on Electric Vehicles in India",
       description:
-        "This is a static online food ordering platform specially designed for our institute. This is a client based model. It was my first project in our academics",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000",
-      tags: ["HTML", "CSS", "JavaScript"],
-      liveLink: "https://anitsfoodengine.netlify.app/",
-      repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/AnitsFoodEngine",
+        "Performed business analysis on real-time EV data for a EV production company to enter into the market. The analysis includes market segmentation, customer profiling, and demand forecasting.",
+      image:
+        "https://plus.unsplash.com/premium_photo-1726812103168-6ad609e53f94?q=80&w=1208&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      tags: ["Python","Rest API", "Data Analysis"],
+      repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/MarketSegmentationOnElectricVehicle",
     },
     {
-      title: "Unemployment Rate Prediction",
+      title : "AI Water Tracker",
       description:
-        "This machine learning model predicts the unemployment rate in the states of India.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1000",
-      tags: ["Python- Pandas, Plotly, Seaborn"],
-      repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/UnemploymentRate",
+        "AI Water Tracker is an intelligent hydration monitoring system built with FastAPI, LangChain (Ollama or OpenAI LLMs), SQLite, and Streamlit. The app allows users to log their daily water intake, analyze hydration levels using AI, and visualize intake history. It features a REST API backend, a smart AI agent for personalized hydration suggestions, and an intuitive frontend dashboard for tracking progress. Designed to promote healthy living through technology.",
+      image :"https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      tags : ["Python", "FastAPI","LangChain (Ollama)", "Streamlit", "SQLite", "Pydantic"],
+      repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/AI-Water-Tracker.github.io",
+      liveLink: "https://ai-water-tracker.streamlit.app/"
     },
     {
       title: "T20 World Cup Cricket Analysis",
