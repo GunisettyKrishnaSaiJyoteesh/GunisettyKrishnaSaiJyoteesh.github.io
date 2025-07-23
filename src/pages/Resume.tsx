@@ -58,7 +58,7 @@ const Resume = () => {
                   <h3 className="text-xl font-bold">Machine Leaarning Intern</h3>
                   <p className="text-brand-600 dark:text-brand-400 text-sm mt-1">Feynn Labs</p>
                 </div>
-                <span className="text-sm text-brand-500">April 2025 - Present</span>
+                <span className="text-sm text-brand-500">April 2025 - June 2025</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
