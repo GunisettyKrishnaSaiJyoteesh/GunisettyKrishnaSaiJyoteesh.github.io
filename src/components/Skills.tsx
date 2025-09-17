@@ -12,7 +12,6 @@ const Skills = () => {
         { name: "Java", proficiency: 85 },
         { name: "C", proficiency: 85 },
         { name: "Python", proficiency: 80 },
-        
         { name: "R", proficiency: 75 },
       ],
     },
@@ -23,6 +22,7 @@ const Skills = () => {
         { name: "Data Wrangling and Preprocessing", proficiency: 90 },
         { name: "Data Modelling", proficiency: 85 },
         { name: "Descriptive & Inferential Statistics", proficiency: 85 },
+        { name : "Snowflake", proficiency: 80 },
       ],
     },
     {
@@ -54,9 +54,9 @@ const Skills = () => {
       title: "Database Management",
       icon: <Database className="h-6 w-6 text-brand-500" />,
       skills: [
+        {name : "PostgreSQL", proficiency: 90 },
         { name: "SQL", proficiency: 80 },
         { name: "MongoDB", proficiency: 75 },
-        
       ],
     },
     {
@@ -65,7 +65,6 @@ const Skills = () => {
       skills: [
         { name: "Canva", proficiency: 90 },
         { name: "Git & GitHub", proficiency: 85 },
-        
       ],
     },
   ];

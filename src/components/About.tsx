@@ -18,7 +18,7 @@ const About = () => {
             </p>
             
             <p className="text-brand-800/70 dark:text-brand-300/70 mb-4">
-              Currently deepening my grasp of DSA concepts and have solved over 150 problems on LeetCode to strengthen problem-solving skills. I believe in continuous learning and am always exploring new
+              Currently deepening my grasp of DSA concepts and have solved over 250 problems on LeetCode to strengthen problem-solving skills. I believe in continuous learning and am always exploring new
               technologies and approaches.
             </p>
             
