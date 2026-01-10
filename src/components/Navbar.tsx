@@ -41,9 +41,15 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="text-xl font-bold text-brand-950 dark:text-white group">
-          Portfolio<span className="text-brand-500 group-hover:animate-pulse-slow">.</span>
+        <a href="/" className="flex items-center gap-2 font-bold text-xl">
+          <img 
+            src="/favicon.png" 
+            alt="Logo" 
+            className="h-8 w-8 object-contain"
+          />
+          GKSJ
         </a>
+
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">

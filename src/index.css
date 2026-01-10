@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -85,16 +84,32 @@
     @apply text-3xl md:text-4xl font-bold relative mb-12 inline-block;
   }
 
+  /* 🔥 Animated underline effect */
   .section-title::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-brand-500;
+    @apply absolute bottom-0 left-0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #4f46e5, #06b6d4);
+    transition: width 0.5s ease;
     transform: translateY(8px);
+  }
+
+  .section-title:hover::after {
+    width: 100%;
   }
 }
 
 @layer utilities {
   .project-card {
-    @apply bg-card rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-border;
+    @apply bg-card rounded-lg shadow-md overflow-hidden transition-all duration-300 border border-border;
+  }
+
+  /* 🔥 Glow for cards in light mode */
+  /* Since .light is on html, replace selector accordingly */
+  html.light .project-card:hover {
+    box-shadow: 0 8px 25px rgba(100, 150, 250, 0.25);
+    transform: translateY(-6px);
   }
 
   .animated-link {
@@ -114,8 +129,12 @@
     @apply backdrop-blur-lg border rounded-lg;
   }
   
-  .light .glass-panel {
-    @apply bg-white/70 border-white/20 shadow-lg;
+  /* 🔥 Glass effect for light mode */
+  html.light .glass-panel {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px) saturate(150%);
+    border: 1px solid rgba(200, 200, 200, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   }
   
   .dark .glass-panel {
@@ -128,11 +147,103 @@
   
   .glow::before {
     content: '';
-    @apply absolute -inset-0.5 bg-gradient-to-r from-brand-500 to-brand-700 rounded-lg blur opacity-30 transition-opacity duration-300;
+    @apply absolute -inset-0.5 rounded-lg blur opacity-30 transition-opacity duration-300;
+    background: linear-gradient(90deg, #4f46e5, #06b6d4);
     z-index: -1;
   }
   
   .glow:hover::before {
     @apply opacity-70;
+  }
+
+  /* 🌟 Moving Gradient Background */
+  /* Adjusted selector for html.light */
+  html.light body {
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-size: 200% 200%;
+    animation: lightGradient 15s ease infinite;
+  }
+
+  @keyframes lightGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* 🌸 Floating Blobs with gentle transform and opacity animation for light mode */
+  html.light::before,
+  html.light::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(120px);
+    opacity: 0.5;
+    animation: floatBlobs 18s ease-in-out infinite alternate, blobGlow 6s ease-in-out infinite alternate;
+  }
+
+  html.light::before {
+    top: 10%;
+    left: -10%;
+    background: radial-gradient(circle at center, rgba(135, 206, 250, 0.5), transparent 70%);
+  }
+
+  html.light::after {
+    bottom: 10%;
+    right: -10%;
+    background: radial-gradient(circle at center, rgba(255, 182, 193, 0.5), transparent 70%);
+    animation-duration: 22s, 6s;
+  }
+
+  @keyframes floatBlobs {
+    from {
+      transform: translate(0px, 0px) scale(1);
+    }
+    to {
+      transform: translate(60px, -40px) scale(1.2);
+    }
+  }
+  @keyframes blobGlow {
+    from {
+      opacity: 0.35;
+    }
+    to {
+      opacity: 0.65;
+    }
+  }
+
+  /* 🌐 Floating Particles with float and gentle scale/opacity pulse for light mode */
+  html.light .particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  html.light .particles span {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 50%;
+    animation: floatUp 20s linear infinite, pulseScale 6s ease-in-out infinite;
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    50% { opacity: 0.4; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+  }
+
+  @keyframes pulseScale {
+    0%, 100% { transform: scale(1); opacity: 0.05; }
+    50% { transform: scale(1.3); opacity: 0.15; }
   }
 }

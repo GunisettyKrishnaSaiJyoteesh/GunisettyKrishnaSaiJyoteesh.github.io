@@ -1,56 +1,77 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import Navbar from "@/components/Navbar";  // Adjust the path as per your project
-import Footer from "@/components/Footer";  // Adjust the path as per your project
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const allProjects = [
   {
-    title: "ANITS FOOD ENGINE",
+    title: "DeepVision – Real-Time Crowd Monitoring System",
     description:
-      "This is a static online food ordering platform specially designed for our institute. This is a client based model. It was my first project in our academics",
+      "Built a CSRNet-based real-time crowd monitoring system to generate density maps and estimate crowd counts from video streams. Includes OpenCV-based live inference and a Streamlit dashboard with automated overcrowding alerts.",
+    image:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+    tags: ["Python", "OpenCV", "CSRNet", "Streamlit", "Computer Vision", "Deep Learning"],
+    repoLink: "https://github.com/GKSJ-Deepvision/AI-DeepVision",
+    liveLink: "https://ai-powered-crowd-monitoring-with-smtp-alert.streamlit.app/"
+  },
+  {
+    title: "CliniScan – Lung Abnormality Detection on X-Rays",
+    description:
+      "Developed a PyTorch and YOLOv8–based system to detect and localize lung abnormalities from VinDr-CXR chest X-ray DICOM images with Grad-CAM based explainability for clinical decision support.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTekzf_iAuCyB3OxAVxRFcbDdYGIzLvvvgugA&s",
+    tags: ["Python", "YOLOv8", "PyTorch", "DICOM", "Grad-CAM", "Medical AI"],
+    repoLink: "https://github.com/GKSJ-AI-CliniScan/AI-CliniScan",
+    liveLink: "https://huggingface.co/spaces/mayankbhagat/Cliniscan"
+  },
+  {
+    title: "Market Segmentation Analysis on Electric Vehicles",
+    description:
+      "Performed market segmentation on real-time EV datasets using Python and REST APIs to identify customer segments and entry strategies for EV manufacturers.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1726812103168-6ad609e53f94?q=80&w=1208&auto=format&fit=crop",
+    tags: ["Python", "REST API", "Data Analysis", "Market Segmentation"],
+    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/MarketSegmentationOnElectricVehicle",
+  },
+  {
+    title: "AI Water Tracker",
+    description:
+      "AI-powered hydration tracking system using FastAPI, LangChain (Ollama), SQLite, and Streamlit to log water intake, analyze hydration patterns, and generate personalized health recommendations.",
+    image:
+      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=1170&auto=format&fit=crop",
+    tags: ["Python", "FastAPI", "LangChain", "Streamlit", "SQLite"],
+    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/AI-Water-Tracker.github.io",
+    liveLink: "https://ai-water-tracker.streamlit.app/",
+  },
+  {
+    title: "T20 World Cup Cricket Analysis",
+    description:
+      "Built an interactive Power BI dashboard for T20 World Cup cricket analytics using web scraping, data preprocessing, feature engineering, and data modeling.",
+    image:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000",
+    tags: ["Power BI", "Data Visualization", "Web Scraping", "Analytics"],
+    liveLink:
+      "https://app.powerbi.com/links/WSYfbilfBH?ctid=6e0ab46c-ac12-4727-99f7-3271c72e220f&pbi_source=linkShare",
+  },
+  {
+    title: "Unemployment Rate Prediction",
+    description:
+      "Machine learning model to predict unemployment rates across Indian states using historical datasets and visualization.",
+    image:
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1000",
+    tags: ["Python", "Pandas", "Plotly", "Seaborn", "Machine Learning"],
+    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/UnemploymentRate",
+  },
+  {
+    title: "ANITS Food Engine",
+    description:
+      "Static online food ordering platform designed for ANITS with a client-based model. First academic web project.",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000",
     tags: ["HTML", "CSS", "JavaScript"],
     liveLink: "https://anitsfoodengine.netlify.app/",
     repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/AnitsFoodEngine",
-  },
-  {
-    title: "Unemployment Rate Prediction",
-    description:
-      "This machine learning model predicts the unemployment rate in the states of India.",
-    image:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1000",
-    tags: ["Python- Pandas, Plotly, Seaborn"],
-    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/UnemploymentRate",
-  },
-  {
-    title: "T20 World Cup Cricket Analysis",
-    description:
-      "Developed an interactive Power BI dashboard for T20 World Cup cricket analysis, involving webscraping, data preprocessing, feature engineering, data modeling, and insightful visualizations.",
-    image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000",
-    tags: ["Power BI", "Data Visualization", "Web Scraping"],
-    liveLink:
-      "https://app.powerbi.com/links/WSYfbilfBH?ctid=6e0ab46c-ac12-4727-99f7-3271c72e220f&pbi_source=linkShare",
-  },
-  {
-    title : "Market Segmentation Analysis on Electric Vehicles in India",
-    description:
-      "Performed business analysis on real-time EV data for a EV production company to enter into the market. The analysis includes market segmentation, customer profiling, and demand forecasting.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1726812103168-6ad609e53f94?q=80&w=1208&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Python","Rest API", "Data Analysis"],
-    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/MarketSegmentationOnElectricVehicle",
-  },
-  {
-    title : "AI Water Tracker",
-    description:
-      "AI Water Tracker is an intelligent hydration monitoring system built with FastAPI, LangChain (Ollama or OpenAI LLMs), SQLite, and Streamlit. The app allows users to log their daily water intake, analyze hydration levels using AI, and visualize intake history. It features a REST API backend, a smart AI agent for personalized hydration suggestions, and an intuitive frontend dashboard for tracking progress. Designed to promote healthy living through technology.",
-    image :"https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags : ["Python", "FastAPI","LangChain (Ollama)", "Streamlit", "SQLite", "Pydantic"],
-    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/AI-Water-Tracker.github.io",
-    liveLink: "https://ai-water-tracker.streamlit.app/"
   },
 ];
 
@@ -129,8 +150,7 @@ const ViewAllProjects = () => {
           <div className="flex justify-center mt-12">
             <Button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="bg-brand-500 hover:bg-brand-600 text-white glow animate-fade-in opacity-0"
-              style={{ animationDelay: "1s" }}
+              className="bg-brand-500 hover:bg-brand-600 text-white glow"
             >
               Back to Top
             </Button>

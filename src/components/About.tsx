@@ -18,7 +18,7 @@ const About = () => {
             </p>
             
             <p className="text-brand-800/70 dark:text-brand-300/70 mb-4">
-              Currently deepening my grasp of DSA concepts and have solved over 250 problems on LeetCode to strengthen problem-solving skills. I believe in continuous learning and am always exploring new
+              Currently deepening my grasp of DSA concepts and have solved over 500 problems on LeetCode to strengthen problem-solving skills. I believe in continuous learning and am always exploring new
               technologies and approaches.
             </p>
             
@@ -29,15 +29,16 @@ const About = () => {
             <p className="text-brand-800/70 dark:text-brand-300/70 mb-4">2022 - 2026</p>
           </div>
           
-          <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
-            <div className="aspect-square rounded-lg bg-gradient-to-tr from-brand-200 to-brand-500 dark:from-brand-600 dark:to-brand-800 flex items-center justify-center shadow-lg animate-float glow">
+          <div className="animate-fade-in opacity-100" style={{ animationDelay: "0.4s" }}>
+            <div className="aspect-square rounded-lg bg-gradient-to-tr from-brand-200 to-brand-500 dark:from-brand-600 dark:to-brand-800 flex items-center justify-center shadow-xl animate-float glow">
               <img
-                src="/maleicon.jpeg"
+                src="/pp.jpg"
                 alt="Profile"
-                className="w-3/4 h-3/4 object-contain opacity-7 0"
+                className="w-3/4 h-3/4 object-contain opacity-90 rounded-lg border-2 border-white/30  hover:scale-105 hover:brightness-150"
               />
             </div>
           </div>
+
 
         </div>
       </div>

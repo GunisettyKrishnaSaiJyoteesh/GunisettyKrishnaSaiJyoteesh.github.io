@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
@@ -6,33 +5,37 @@ import { Link } from "react-router-dom"; // at the top
 
 const Projects = () => {
   const projects = [
-    {
-      title : "Market Segmentation Analysis on Electric Vehicles in India",
-      description:
-        "Performed business analysis on real-time EV data for a EV production company to enter into the market. The analysis includes market segmentation, customer profiling, and demand forecasting.",
-      image:
-        "https://plus.unsplash.com/premium_photo-1726812103168-6ad609e53f94?q=80&w=1208&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      tags: ["Python","Rest API", "Data Analysis"],
-      repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/MarketSegmentationOnElectricVehicle",
-    },
-    {
-      title : "AI Water Tracker",
-      description:
-        "AI Water Tracker is an intelligent hydration monitoring system built with FastAPI, LangChain (Ollama or OpenAI LLMs), SQLite, and Streamlit. The app allows users to log their daily water intake, analyze hydration levels using AI, and visualize intake history. It features a REST API backend, a smart AI agent for personalized hydration suggestions, and an intuitive frontend dashboard for tracking progress. Designed to promote healthy living through technology.",
-      image :"https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      tags : ["Python", "FastAPI","LangChain (Ollama)", "Streamlit", "SQLite", "Pydantic"],
-      repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/AI-Water-Tracker.github.io",
-      liveLink: "https://ai-water-tracker.streamlit.app/"
-    },
-    {
-      title: "T20 World Cup Cricket Analysis",
-      description:
-        "Developed an interactive Power BI dashboard for T20 World Cup cricket analysis, involving webscraping, data preprocessing, feature engineering, data modeling, and insightful visualizations.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000",
-      tags: ["Power BI", "Data Visualization", "Web Scraping"],
-      liveLink: "https://app.powerbi.com/links/WSYfbilfBH?ctid=6e0ab46c-ac12-4727-99f7-3271c72e220f&pbi_source=linkShare",
-    },
-  ];
+  {
+    title: "DeepVision – Real-Time Crowd Monitoring System",
+    description:
+      "Built a CSRNet-based real-time crowd monitoring system to generate density maps and estimate crowd counts from video streams. Includes OpenCV-based live inference and a Streamlit dashboard with automated overcrowding alerts.",
+    image:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+    tags: ["Python", "OpenCV", "CSRNet", "Streamlit", "Computer Vision", "Deep Learning"],
+    repoLink: "https://github.com/GKSJ-Deepvision/AI-DeepVision",
+    liveLink: "https://ai-powered-crowd-monitoring-with-smtp-alert.streamlit.app/"
+  },
+  {
+    title: "CliniScan – Lung Abnormality Detection on X-Rays",
+    description:
+      "Developed a PyTorch and YOLOv8–based system to detect and localize lung abnormalities from VinDr-CXR chest X-ray DICOM images with Grad-CAM based explainability for clinical decision support.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTekzf_iAuCyB3OxAVxRFcbDdYGIzLvvvgugA&s",
+    tags: ["Python", "YOLOv8", "PyTorch", "DICOM", "Grad-CAM", "Medical AI"],
+    repoLink: "https://github.com/GKSJ-AI-CliniScan/AI-CliniScan",
+    liveLink: "https://huggingface.co/spaces/mayankbhagat/Cliniscan"
+  },
+  {
+    title: "Market Segmentation Analysis on Electric Vehicles",
+    description:
+      "Performed market segmentation on real-time EV datasets using Python and REST APIs to identify customer segments and entry strategies for EV manufacturers.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1726812103168-6ad609e53f94?q=80&w=1208&auto=format&fit=crop",
+    tags: ["Python", "REST API", "Data Analysis", "Market Segmentation"],
+    repoLink: "https://github.com/GunisettyKrishnaSaiJyoteesh/MarketSegmentationOnElectricVehicle",
+  },
+];
+
 
   return (
     <section id="projects" className="bg-brand-50 dark:bg-brand-950/80 section-padding transition-colors duration-300">

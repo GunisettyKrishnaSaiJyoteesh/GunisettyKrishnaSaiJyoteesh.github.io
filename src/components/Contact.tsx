@@ -2,9 +2,31 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_96w9y0h",   // ⚡ replace with your EmailJS Service ID
+        "template_o2qw90e",  // ⚡ replace with your EmailJS Template ID
+        e.currentTarget,
+        "VhrSvleTTBjhmF0Vv"    // ⚡ replace with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          alert("✅ Message sent successfully!");
+          e.currentTarget.reset(); // clear the form after submit
+        },
+        (error) => {
+          alert("❌ Failed to send message: " + error.text);
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -55,31 +77,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Phone Row */}
-              <div className="flex items-center gap-4">
-                <div
-                  className="
-                    h-10 w-10 rounded-full 
-                    bg-brand-100 dark:bg-brand-800 
-                    flex items-center justify-center 
-                    text-brand-600 dark:text-brand-400
-                  "
-                >
-                  <Phone size={18} />
-                </div>
-                <div>
-                  <p className="text-sm text-brand-700 dark:text-brand-300">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:+917013393489"
-                    className="text-brand-900 dark:text-white font-medium"
-                  >
-                    +91 7013393489
-                  </a>
-                </div>
-              </div>
-
               {/* Location Row */}
               <div className="flex items-center gap-4">
                 <div
@@ -106,15 +103,7 @@ const Contact = () => {
 
           {/* ─── Right: Contact Form ─── */}
           <div>
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              className="space-y-6"
-            >
-              {/* Hidden input required by Netlify */}
-              <input type="hidden" name="form-name" value="contact" />
-
+            <form onSubmit={sendEmail} className="space-y-6">
               {/* Name & Email Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Name Field */}

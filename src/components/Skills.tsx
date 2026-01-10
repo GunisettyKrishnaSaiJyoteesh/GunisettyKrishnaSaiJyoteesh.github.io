@@ -1,28 +1,60 @@
-
 import React from "react";
 import { Progress } from "@/components/ui/progress";
-import { Layers, Code, Server, Database, PaintBucket, LineChart } from "lucide-react";
+import { Layers, Code, Server, Database, Brain, LineChart } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming Languages",
-      icon: <Server className="h-6 w-6 text-brand-500" />,
+      title: "Data Science & Analytics",
+      icon: <LineChart className="h-6 w-6 text-brand-500" />,
       skills: [
-        { name: "Java", proficiency: 85 },
-        { name: "C", proficiency: 85 },
-        { name: "Python", proficiency: 80 },
-        { name: "R", proficiency: 75 },
+        { name: "Pandas & NumPy", proficiency: 95 },
+        { name: "Power BI & Dashboarding", proficiency: 90 },
+        { name: "Feature Engineering", proficiency: 90 },
+        { name: "Statistical Analysis", proficiency: 85 },
+        { name: "Snowflake", proficiency: 80 },
       ],
     },
     {
-      title: "Data Analysis",
-      icon: <Code className="h-6 w-6 text-brand-500" />,
+      title: "Machine Learning & Deep Learning",
+      icon: <Brain className="h-6 w-6 text-brand-500" />,
       skills: [
-        { name: "Data Wrangling and Preprocessing", proficiency: 90 },
-        { name: "Data Modelling", proficiency: 85 },
-        { name: "Descriptive & Inferential Statistics", proficiency: 85 },
-        { name : "Snowflake", proficiency: 80 },
+        { name: "Supervised & Unsupervised Learning", proficiency: 90 },
+        { name: "CNNs & Deep Neural Networks", proficiency: 90 },
+        { name: "YOLOv8 & Object Detection", proficiency: 85 },
+        { name: "Model Training & Evaluation", proficiency: 90 },
+        { name: "Grad-CAM & Explainable AI", proficiency: 85 },
+      ],
+    },
+        {
+      title: "Programming Languages",
+      icon: <Server className="h-6 w-6 text-brand-500" />,
+      skills: [
+        { name: "Python", proficiency: 90 },
+        { name: "Java", proficiency: 85 },
+        { name: "R", proficiency: 80 },
+        { name: "C", proficiency: 75 },
+      ],
+    },
+    {
+      title: "Computer Vision & Medical Imaging",
+      icon: <Layers className="h-6 w-6 text-brand-500" />,
+      skills: [
+        { name: "OpenCV", proficiency: 90 },
+        { name: "Image Preprocessing & Augmentation", proficiency: 90 },
+        { name: "DICOM Handling", proficiency: 85 },
+        { name: "CSRNet & Crowd Density Estimation", proficiency: 85 },
+      ],
+    },
+    
+    {
+      title: "Databases & APIs",
+      icon: <Database className="h-6 w-6 text-brand-500" />,
+      skills: [
+        { name: "MySQL & PostgreSQL", proficiency: 90 },
+        { name: "SQLite", proficiency: 85 },
+        { name: "REST APIs", proficiency: 85 },
+        { name: "FastAPI", proficiency: 85 },
       ],
     },
     {
@@ -30,41 +62,17 @@ const Skills = () => {
       icon: <Code className="h-6 w-6 text-brand-500" />,
       skills: [
         { name: "Automation Anywhere", proficiency: 95 },
+        { name: "Process Automation & Bots", proficiency: 90 },
       ],
     },
     {
-      title: "Data Visualization",
-      icon: <LineChart className="h-6 w-6 text-brand-500" />,
-      skills: [
-        { name: "Python (matplotlib,seaborn)", proficiency: 90 },
-        { name: "Power BI", proficiency: 90 },
-        { name: "R (ggplot2,)", proficiency: 85 },
-        
-      ],
-    },
-    {
-      title: "Frontend Development",
-      icon: <Code className="h-6 w-6 text-brand-500" />,
-      skills: [
-        { name: "HTML/CSS", proficiency: 90 },
-        { name: "JavaScript", proficiency: 85 },
-      ],
-    },
-    {
-      title: "Database Management",
-      icon: <Database className="h-6 w-6 text-brand-500" />,
-      skills: [
-        {name : "PostgreSQL", proficiency: 90 },
-        { name: "SQL", proficiency: 80 },
-        { name: "MongoDB", proficiency: 75 },
-      ],
-    },
-    {
-      title: "Other Skills",
+      title: "Development Tools",
       icon: <Layers className="h-6 w-6 text-brand-500" />,
       skills: [
-        { name: "Canva", proficiency: 90 },
-        { name: "Git & GitHub", proficiency: 85 },
+        { name: "Git & GitHub", proficiency: 90 },
+        { name: "VS Code & IntelliJ", proficiency: 85 },
+        { name: "Streamlit", proficiency: 85 },
+        { name: "Linux & Windows", proficiency: 80 },
       ],
     },
   ];
@@ -76,7 +84,11 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           {skillCategories.map((category, index) => (
-            <div key={index} className="glass-panel p-6 animate-fade-in opacity-0" style={{ animationDelay: `${0.1 * index}s` }}>
+            <div
+              key={index}
+              className="glass-panel p-6 animate-fade-in opacity-0"
+              style={{ animationDelay: `${0.1 * index}s` }}
+            >
               <div className="flex items-center gap-2 mb-6">
                 {category.icon}
                 <h3 className="text-xl font-semibold text-brand-900 dark:text-white">
@@ -95,8 +107,8 @@ const Skills = () => {
                         {skill.proficiency}%
                       </span>
                     </div>
-                    <Progress 
-                      value={skill.proficiency} 
+                    <Progress
+                      value={skill.proficiency}
                       className="h-2 bg-brand-100 dark:bg-brand-800/40"
                     />
                   </div>
