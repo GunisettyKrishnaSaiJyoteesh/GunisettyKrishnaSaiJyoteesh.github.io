@@ -54,7 +54,6 @@ const Skills = () => {
         { name: "MySQL & PostgreSQL", proficiency: 90 },
         { name: "SQLite", proficiency: 85 },
         { name: "REST APIs", proficiency: 85 },
-        { name: "FastAPI", proficiency: 85 },
       ],
     },
     {

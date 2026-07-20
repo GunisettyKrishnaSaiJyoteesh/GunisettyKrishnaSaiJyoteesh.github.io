@@ -70,10 +70,27 @@ const Resume = () => {
             <CardHeader>
               <CardTitle className="flex justify-between">
                 <div>
+                  <h3 className="text-xl font-bold">AI/ML Engineer Intern</h3>
+                  <p className="text-brand-600 dark:text-brand-400 text-sm">AnayaMED HealthTech Pvt Ltd.</p>
+                </div>
+                <span className="text-sm text-brand-500">July 2026 – Present</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                <li>Working on building ASR and TTS engines for the platform.</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-6 border-l-4 border-l-brand-500">
+            <CardHeader>
+              <CardTitle className="flex justify-between">
+                <div>
                   <h3 className="text-xl font-bold">SDE Intern & Mentor</h3>
                   <p className="text-brand-600 dark:text-brand-400 text-sm">Aspire Infolabs</p>
                 </div>
-                <span className="text-sm text-brand-500">Sep 2025 – Present</span>
+                <span className="text-sm text-brand-500">Sep 2025 – June 2026</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -164,12 +181,12 @@ const Resume = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle>NLP, APIs & Automation</CardTitle>
+                <CardTitle>NLP & Automation</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                  <li>Natural Language Processing (NLP)</li>
-                  <li>FastAPI, REST APIs</li>
+                  <li>ASR and TTS</li>
+                  <li>REST APIs</li>
                   <li>LangChain & LLM-based systems</li>
                   <li>Robotic Process Automation (Automation Anywhere)</li>
                 </ul>
