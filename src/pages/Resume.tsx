@@ -52,7 +52,7 @@ const Resume = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">CGPA: 9.28</p>
+              <p className="text-muted-foreground">CGPA: 9.26</p>
             </CardContent>
           </Card>
         </section>
